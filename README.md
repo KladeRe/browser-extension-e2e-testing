@@ -2,6 +2,13 @@
 
 A project about clarifying the concept of e2e testing browser extensions
 
+## How to run
+
+Execute the below command to run all e2e tests:
+```sh
+npm run test
+```
+
 ## Why
 
 Browser extensions may have huge differences, meaning that common e2e testing frameworks might not have direct support for them. Documentation about these edge cases is lacking,
