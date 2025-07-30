@@ -1,0 +1,10 @@
+{
+  "name": "browser-extension-e2e-testing",
+  "version": "0.0.0",
+  "description": "Browser extension e2e testing cases",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*"
+  ]
+}
