@@ -10,7 +10,8 @@
   "scripts": {
     "lint": "eslint .",
     "test": "playwright test",
-    "test:simple": "playwright test apps/simple"
+    "test:simple": "playwright test apps/simple",
+    "test:cookies": "playwright test apps/cookies"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
