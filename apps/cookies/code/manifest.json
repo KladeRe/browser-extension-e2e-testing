@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Cookie Reader Extension",
+  "description": "A Chrome extension that reads specific cookies from websites and displays them in the popup.",
+  "version": "0.0.1",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "cookies"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}
