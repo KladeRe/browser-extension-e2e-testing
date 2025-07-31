@@ -7,6 +7,7 @@ export const test = base.extend<{
   context: BrowserContext;
   extensionId: string;
 }>({
+  // eslint-disable-next-line
   context: async ({}, use) => {
     const context = await chromium.launchPersistentContext("", {
       headless: false,
