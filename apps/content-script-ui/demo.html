@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Script UI Demo Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .demo-section {
+            background: #f5f5f5;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Content Script UI Demo</h1>
+
+    <div class="demo-section">
+        <h2>Instructions</h2>
+        <p>This page is designed to test the content script UI extension. Look for:</p>
+        <ul>
+            <li>A simple white panel with black border in the top-right corner</li>
+            <li>The panel should contain:
+                <ul>
+                    <li>A header saying "Extension UI"</li>
+                    <li>An input field and submit button</li>
+                    <li>An output area for displaying submitted text</li>
+                    <li>A close button</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="demo-section">
+        <h2>Testing the Extension</h2>
+        <p>Try these interactions:</p>
+        <ul>
+            <li>Type some text in the extension's input field and click "Submit"</li>
+            <li>Try pressing Enter instead of clicking the button</li>
+            <li>Click the "Close" button to hide the extension panel</li>
+            <li>Interact with the page content below to ensure it still works</li>
+        </ul>
+    </div>
+
+    <div class="demo-section">
+        <h2>Page Content</h2>
+        <p>This is the actual page content. The extension should not interfere with this.</p>
+
+        <form>
+            <label for="demo-input">Page Input:</label>
+            <input type="text" id="demo-input" placeholder="This is the page's own input">
+            <button type="button">Page Button</button>
+        </form>
+    </div>
+
+    <script>
+        // Page JavaScript to show this is a real page
+        console.log('Demo page loaded');
+
+        document.querySelector('button[type="button"]').addEventListener('click', function() {
+            alert('This is the page\'s own button, not the extension\'s!');
+        });
+    </script>
+</body>
+</html>
