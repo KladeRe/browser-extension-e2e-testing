@@ -1,28 +1,63 @@
-# Edge cases in e2e testing browser extensions
+# How to E2E test various browser extensions
 
-A project about clarifying the concept of e2e testing browser extensions
+#### A list of guiding examples on how to end-to-end test browser extensions
+
+## E2E testing examples
+
+| Example | Description |
+|---------|-------------|
+| [🚀 Basic Extension](apps/simple/README.md) | Basic browser extension structure (popup script) |
+| [🎨 Content Script UI](apps/content-script-ui/README.md) | Extension with **content script** based UI |
+| [🍪 Cookies Example](apps/cookies/README.md) | E2E testing extensions with **cookies** |
+| [📌 Side Panel UI](apps/side-panel-ui/README.md) | **Side panel** extension testing |
 
 ## How to run
 
-Execute the below command to run all e2e tests:
+Install necessary dependencies (Playwright, TypeScript, ESLint):
+```sh
+npm install
+```
+
+Run all e2e tests:
 ```sh
 npm run test
 ```
 
+Run tests for a single example:
+
+```sh
+npm run test:<app-codename>
+```
+
 ## Why
 
-Browser extensions may have huge differences, meaning that common e2e testing frameworks might not have direct support for them. Comprehensive documentation about these edge cases is lackluster, which is the idea behind this project.
-
-## What
-
-This project aims to serve as a guide to those that want to e2e-test browser extensions that don't follow the traditional extension structure.
-
-## How
-
-To make things easy, this repository will include example cases where the extension code is provided in the `code` directory and the test code is coupled with it in the `tests` directory.
-
-For scenarios that can't be e2e tested in a reasonable manner, a detailed explanation will be added about why it can't be reasonably e2e-tested. This is to help and inspire future research about these edge cases.
+The amount of differences between browser extensions presents different requirements for e2e-testing them. This project aims to make it easier to learn browser extensions by providing extensive detailed documentation coupled with practical examples (code).
 
 ## Tools
 
-The aim of this project is to stick to modern tools for e2e testing and web development. On the code-side this means that Typescript will be preferred whenever possible. Modern e2e-testing frameworks such as Playwright will be preferred over older frameworks, however, if using older frameworks makes sense in a particular scenario, they will be used.
+The aim of this project is to stick to modern tools for e2e testing and web development. For this reason [TypeScript](https://www.typescriptlang.org/) will be used to implement the browser extensions in the examples. The target browser of the example extensions is [Chromium](https://www.chromium.org/Home/) due to being easy to integrate with browser testing frameworks.
+
+[Playwright](https://playwright.dev/) is the chosen e2e testing framework. It was chosen due to having documented support for browser extension testing ([link to documentation](https://playwright.dev/docs/chrome-extensions)).
+
+## Structure
+
+The following is the file structure of a single example case:
+
+```
+app/
+|
+├── code/              # Browser extension code
+│   ├── manifest.json
+|   ├── *.js
+|   └── *.html
+|
+└── tests/             # Directory containing test code
+    ├──  pages/
+    |    └── *.ts      # Page object model of extension UI
+    ├── *.spec.ts      # Playwright test cases
+    └── fixtures.ts    # Test fixture for extension environment
+```
+
+For more information about page object models and test fixtures in Playwright, check:
+- https://playwright.dev/docs/pom
+- https://playwright.dev/docs/test-fixtures

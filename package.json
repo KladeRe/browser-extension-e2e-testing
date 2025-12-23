@@ -1,7 +1,7 @@
 {
   "name": "browser-extension-e2e-testing",
   "version": "0.0.0",
-  "description": "Browser extension e2e testing cases",
+  "description": "Browser extension e2e testing guide",
   "private": true,
   "type": "module",
   "workspaces": [
