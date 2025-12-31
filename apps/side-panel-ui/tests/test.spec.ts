@@ -1,5 +1,7 @@
-import { test, expect } from "./fixtures";
-import { openSidePanel } from "./pages/side-panel";
+import { openSidePanel } from "./pom";
+import { createExtensionFixtures, expect } from "../../fixtures";
+
+const test = createExtensionFixtures("apps/side-panel-ui/code")
 
 test.describe("Side Panel Extension Tests", () => {
   test("side panel opens and displays correctly", async ({ page, extensionId }) => {

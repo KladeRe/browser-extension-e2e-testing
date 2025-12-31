@@ -1,5 +1,7 @@
-import { test, expect } from "./fixtures";
-import { openPopup } from "./pages/popup";
+import { openPopup } from "./pom";
+import { createExtensionFixtures, expect } from "../../fixtures";
+
+const test = createExtensionFixtures("apps/simple/code")
 
 test("Simple popup works as expected", async ({ page, extensionId }) => {
   const popup = await openPopup(page, extensionId);

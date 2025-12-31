@@ -1,4 +1,6 @@
-import { test, expect } from './fixtures';
+import { createExtensionFixtures, expect } from "../../fixtures";
+
+const test = createExtensionFixtures("apps/cookies/code")
 
 test.describe('Cookie Extension Tests', () => {
   test('should show error when target cookie does not exist', async ({ context, extensionId }) => {
