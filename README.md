@@ -52,17 +52,17 @@ The following is the file structure of a single example case:
 ```
 app/
 |
-├── code/              # Browser extension code
+├── code/                 # Browser extension code
 │   ├── manifest.json
 |   ├── *.js
 |   └── *.html
 |
-└── tests/             # Directory containing test code
-    ├──  pages/
-    |    └── *.ts      # Page object model of extension UI
-    ├── *.spec.ts      # Playwright test cases
-    └── fixtures.ts    # Test fixture for extension environment
+└── tests/                # Test code
+    ├── pom.ts            # Page object model of extension UI (not always necessary)
+    └── test.spec.ts      # Playwright test cases
 ```
+
+The [fixtures.ts](apps/fixtures.ts) contains test fixtures, which are the same in every test. In short, they setup a environment in which browser extensions can be tested.
 
 For more information about page object models and test fixtures in Playwright, check:
 - https://playwright.dev/docs/pom

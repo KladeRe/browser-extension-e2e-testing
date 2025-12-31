@@ -1,6 +1,8 @@
-import { test, expect } from "./fixtures";
-import { ContentScriptUIPage } from "./pages/content-script-ui";
+import { ContentScriptUIPage } from "./pom";
 import path from "path";
+import { createExtensionFixtures, expect } from "../../fixtures";
+
+const test = createExtensionFixtures("apps/content-script-ui/code")
 
 test.describe("Basic Content Script UI Tests", () => {
   test("content script UI is injected into local demo page", async ({ page }) => {
