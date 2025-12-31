@@ -10,12 +10,13 @@
 | [🎨 Content Script UI](apps/content-script-ui/README.md) | Extension with **content script** based UI |
 | [🍪 Cookies Example](apps/cookies/README.md) | E2E testing extensions with **cookies** |
 | [📌 Side Panel UI](apps/side-panel-ui/README.md) | **Side panel** extension testing |
+| [🗄️ Storage](apps/storage/README.md) | Testing extension using **local storage** |
 
 ## Difficult/impossible E2E testing examples
 
 | Example | Description |
 |---------|-------------|
-| [📋 Context menu](apps/context-menu/README.md) | Context menus in E2E testing |
+| [📋 Context menu](apps/context-menu/README.md) | **Context menus** in E2E testing |
 
 ## How to run
 
