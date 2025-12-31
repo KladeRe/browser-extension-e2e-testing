@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Storage Chrome Extension",
+  "description": "An extension that uses the storage permission.",
+  "version": "0.0.1",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}
