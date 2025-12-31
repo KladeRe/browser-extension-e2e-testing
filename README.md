@@ -11,6 +11,12 @@
 | [🍪 Cookies Example](apps/cookies/README.md) | E2E testing extensions with **cookies** |
 | [📌 Side Panel UI](apps/side-panel-ui/README.md) | **Side panel** extension testing |
 
+## Difficult/impossible E2E testing examples
+
+| Example | Description |
+|---------|-------------|
+| [📋 Context menu](apps/context-menu/README.md) | Context menus in E2E testing |
+
 ## How to run
 
 Install necessary dependencies (Playwright, TypeScript, ESLint):
