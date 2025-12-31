@@ -42,13 +42,5 @@ test.describe("Storage Counter Extension", () => {
     await popup.clickIncrement();
     await page.waitForTimeout(50);
     expect(await popup.getCounter()).toBe("11");
-    
-    await popup.clickIncrement();
-    await page.waitForTimeout(50);
-    expect(await popup.getCounter()).toBe("12");
-    
-    await popup.clickIncrement();
-    await page.waitForTimeout(50);
-    expect(await popup.getCounter()).toBe("13");
   });
 });

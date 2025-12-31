@@ -13,9 +13,6 @@ export async function openPopup(page: Page, extensionId: string) {
     clickIncrement: async () => {
       await page.locator("#increment").click();
     },
-    clickReset: async () => {
-      await page.locator("#reset").click();
-    },
     getHeading: () => page.locator("h1").first(),
   };
   

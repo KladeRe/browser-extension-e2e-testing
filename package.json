@@ -13,7 +13,8 @@
     "test:simple": "playwright test apps/simple",
     "test:cookies": "playwright test apps/cookies",
     "test:content-script-ui": "playwright test apps/content-script-ui",
-    "test:side-panel-ui": "playwright test apps/side-panel-ui"
+    "test:side-panel-ui": "playwright test apps/side-panel-ui",
+    "test:storage": "playwright test apps/storage"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
